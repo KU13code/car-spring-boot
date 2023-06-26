@@ -80,12 +80,15 @@
     <hr>
     <h3>Создание нового товара:</h3>
     <form action="/" method="post" enctype="multipart/form-data">
-        Название: <input type="text" name="title">
+        Бренд: <input type="text" name="brand">
         <br><br>
-        Цена: <input type="number" name="price">
+        Модель: <input type="text" name="model">
         <br><br>
-        Описание:
-        <textarea name="description"></textarea>
+        ЛС: <input type="text" name="ls">
+        <br><br>
+        Топливо: <input type="text" name="toplivo">:
+        <br><br>
+        Цена: <input type="text" name="price">
         <br><br>
         Фотография: <input type="file" name="file"><br><br>
         <button type="submit">Создать</button>

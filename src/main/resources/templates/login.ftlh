@@ -3,23 +3,23 @@
     <div style="text-align: center">
         <form action="/login" method="post">
             <div class="form-group">
-                <label for="email">Электронная почта</label>
+                <label for="email">Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°</label>
                 <input type="email" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="email" name="username">
                 <div id="email" class="invalid-feedback">
-                    Неверная электронная почта
+                    РќРµРІРµСЂРЅР°СЏ СЌР»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°
                 </div>
             </div>
             <div class="form-group">
-                <label for="password">Пароль</label>
+                <label for="password">РџР°СЂРѕР»СЊ</label>
                 <input type="password" class="form-control <#if RequestParameters.error??>is-invalid</#if>" id="password" name="password">
                 <div id="password" class="invalid-feedback">
-                    Неверный пароль
+                    РќРµРІРµСЂРЅС‹Р№ РїР°СЂРѕР»СЊ
                 </div>
             </div>
             <input type="hidden" name="_csrf" value="${_csrf.token}">
-            <button type="submit" style="width: 100%" class="btn btn-dark">Войти</button>
+            <button type="submit" style="width: 100%" class="btn btn-dark">Р’РѕР№С‚Рё</button>
         </form>
     </div>
-    <h2>Нет аккаунта BUYCAR? <a href="/registration">Зарегистрируйся!</a></h2>
+    <h2>РќРµС‚ Р°РєРєР°СѓРЅС‚Р° BUYCAR? <a href="/registration">Р—Р°СЂРµРіРёСЃС‚СЂРёСЂСѓР№СЃСЏ!</a></h2>
 
 </@c.page>

@@ -3,19 +3,19 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a href="/">
-                <span class="navbar-brand mb-0 h1">BUYCAR</span>
+                <span class="navbar-brand mb-0 h1">BUYSELL</span>
             </a>
             <#if auth>
                 <form action="/logout" method="post">
                     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                     <button type="submit" style="text-align: center; width: 100%" class="btn btn-danger mb-2">
-                        Выйти из аккаунта
+                        Р’С‹Р№С‚Рё РёР· Р°РєРєР°СѓРЅС‚Р°
                     </button>
                 </form>
             <#else>
                 <button class="btn btn-light my-2 my-sm-0" type="button"
                         onclick="window.location.href = '/login'">
-                    Войти
+                    Р’РѕР№С‚Рё
                 </button>
             </#if>
         </div>

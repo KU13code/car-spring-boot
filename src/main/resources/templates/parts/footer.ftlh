@@ -1,6 +1,5 @@
 <hr>
 <footer class="container">
-    <p class="float-right"><a href="#">Поддержка</a></p>
-    <p> © 2023 BUYCAR</p>
-
+    <p class="float-right"><a href="#">РџРѕРґРґРµСЂР¶РєР°</a></p>
+    <p>В© 2023 BUYSELL</p>
 </footer>

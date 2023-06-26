@@ -1,29 +1,29 @@
 <#import "parts/common.ftlh" as c>
 <@c.page>
-    <h1 style="text-align: center">Регистрация</h1>
+    <h1 style="text-align: center">Р РµРіРёСЃС‚СЂР°С†РёСЏ</h1>
     <hr>
     <form action="/registration" method="post">
         <div class="form-group">
-            <label for="username">Имя пользователя</label>
+            <label for="username">РРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</label>
             <input type="text" class="form-control" id="username" name="username">
         </div>
         <div class="form-group">
-            <label for="name">Имя</label>
+            <label for="name">РРјСЏ</label>
             <input type="text" class="form-control" id="name" name="name">
         </div>
         <div class="form-group">
-            <label for="surname">Фамилия</label>
+            <label for="surname">Р¤Р°РјРёР»РёСЏ</label>
             <input type="text" class="form-control" id="surname" name="surname">
         </div>
         <div class="form-group">
-            <label for="email">Электронная почта</label>
+            <label for="email">Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°</label>
             <input type="email" class="form-control" id="email" name="email">
         </div>
         <div class="form-group">
-            <label for="password">Пароль</label>
+            <label for="password">РџР°СЂРѕР»СЊ</label>
             <input type="password" class="form-control" id="password" name="password">
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <button type="submit" style="width: 100%" class="btn btn-dark">Зарегистрироваться</button>
+        <button type="submit" style="width: 100%" class="btn btn-dark">Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ</button>
     </form>
 </@c.page>
