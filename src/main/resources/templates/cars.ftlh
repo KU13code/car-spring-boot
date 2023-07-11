@@ -69,7 +69,7 @@
                     <#--                        ${product.city}-->
                     <#--                    </div>-->
                     <div class="card-footer">
-                        <#--                        ${product.author}-->
+                         ${car.user.name} ${car.user.surname}
                     </div>
                 </div>
             </a>
@@ -91,6 +91,7 @@
         Цена: <input type="text" name="price">
         <br><br>
         Фотография: <input type="file" name="file"><br><br>
+        <input type="hidden" name="_csrf" value="${_csrf.token}">
         <button type="submit">Создать</button>
     </form>
 </@c.page>

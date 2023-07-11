@@ -1,10 +1,12 @@
 package ru.car.buycar.controllers;
 
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ru.car.buycar.models.Car;
+import ru.car.buycar.models.User;
 import ru.car.buycar.services.CarService;
 
 import java.io.IOException;
@@ -36,9 +38,15 @@ public class CarController {
 
 
     @PostMapping("/")
-    public String save(@RequestParam("file") MultipartFile image, Car car) throws IOException {
-        carService.save(car, image);
+    public String save(@AuthenticationPrincipal User user, @RequestParam("file") MultipartFile image, Car car) throws IOException {
+        carService.save(user, car, image);
         return "redirect:/";
+    }
+
+    @PostMapping("/car/delete/{id}")
+    public String delete(@PathVariable("id") Long id) {
+        carService.delete(id);
+        return "redirect:/profile";
     }
 }
 

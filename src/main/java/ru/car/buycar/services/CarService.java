@@ -7,6 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 import ru.car.buycar.facades.ImageFacade;
 import ru.car.buycar.models.Car;
 import ru.car.buycar.models.Image;
+import ru.car.buycar.models.User;
 import ru.car.buycar.repositories.CarRepository;
 import ru.car.buycar.repositories.ImageRepository;
 
@@ -46,13 +47,18 @@ public class CarService {
         return carRepository.findById(id).orElse(null);
     }
 
-    public void save(Car car, MultipartFile image) throws IOException {
+    public void save(User user , Car car, MultipartFile image) throws IOException {
         Image imageModel = imageFacade.toEntity(image);
         imageModel.setBytes(compressBytes(image.getBytes()));
         car.setImage(imageModel);
+        car.setUser(user);
         log.info("Saving new {}", car.getBrand());
         carRepository.save(car);
 
+    }
+
+    public void delete(Long id) {
+        carRepository.deleteById(id);
     }
 
     public List<Car> search(String key) {
